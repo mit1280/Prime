@@ -1,0 +1,21 @@
+from fractions import Fraction
+import math
+p=int(input("enter first limit"))
+r=int(input("enter end limit"))
+if p==1:
+    p=2
+for a in range(p,r+1):
+    k=0     
+    for i in range(2,int(a/2)+1): 
+        if(a%i==0):
+            k=k+1     
+            break
+    if(k<=0):  
+        x=a*a
+        y=math.factorial(a-1)+1
+        z=Fraction(y,x)
+        z=(z)-int(z)
+        if(z==0.0):
+            print(a)
+            
+            
