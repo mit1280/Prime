@@ -1,0 +1,23 @@
+p=int(input("enter first limit"))
+r=int(input("enter end limit"))
+x=''
+y=''
+for a in range(p,r+1):
+    k=0     
+    for i in range(2,int(a/2)+1): 
+        if(a%i==0):
+            k=k+1     
+            break
+    if(k<=0):  
+        if(x==''):
+            x=int(a)
+            continue
+        if(y==''):
+            y=int(a)
+            if((y-x)==2):
+                print('(',x,',',y,')')
+        else:
+            x=y
+            y=a
+            if((y-x)==2):
+                print('(',x,',',y,')')
