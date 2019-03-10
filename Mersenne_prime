@@ -1,0 +1,15 @@
+import  math
+p=int(input("enter first limit"))
+r=int(input("enter end limit"))
+for a in range(p,r+1):
+    k=0     
+    for i in range(2,int(a/2)): 
+        if(a%i==0):
+            k=k+1     
+            break
+    if(k<=0):  
+        a+=1
+        x=math.log2(a)
+        x=x-int(x)
+        if x==0:
+            print(a-1)
