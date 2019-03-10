@@ -1,6 +1,8 @@
 import  math
 p=int(input("enter first limit"))
 r=int(input("enter end limit"))
+if p==1:
+    p=2
 for a in range(p,r+1):
     k=0     
     for i in range(2,int(a/2)+1): 
