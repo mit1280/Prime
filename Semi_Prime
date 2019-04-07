@@ -1,0 +1,18 @@
+p=int(input("Enter start"))
+r=int(input("Enter end"))
+for a in range(p,r+1):
+    j=a
+    n=a
+    x=[]
+    while(n!=1):
+        for i in range(2,int(n+1)):
+            a=n/i
+            p=a-int(a)
+            if p!=0 :
+                continue
+            else:
+                x.append(i)
+                n=a
+                break
+    if (len(x)==2):
+        print(j)
