@@ -1,0 +1,28 @@
+x=int(input("enter start"))
+y=int(input("enter end"))
+if x==1:
+    x=2
+for a in range(x,y+1):
+    k=0     
+    for i in range(2,int(a/2)+1): 
+        if(a%i==0):
+            k=k+1     
+            break
+    if(k<=0):         
+        sum=0
+        num=a
+        q=0
+        p=[]
+        while(num>0):
+            rem=num%10
+            p.append(rem)
+            num=int(num/10)
+            q+=1
+            m=0
+        while(q>0):
+            sum=sum+p[m]*(10**q)
+            m+=1
+            q-=1
+        sum/=10
+        if(a==sum):
+            print(a)
