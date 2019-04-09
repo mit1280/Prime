@@ -1,0 +1,18 @@
+import math
+p=int(input("enter start"))
+r=int(input("enter end"))
+if p==1:
+    p=2
+for a in range(p,r+1):
+    k=0     
+    for i in range(2,int(a/2)+1): 
+        if(a%i==0):
+            k=k+1     
+            break
+    if(k<=0): 
+        x=a        
+        a*=3
+        a-=1
+        a=math.log2(a)
+        if(a-int(a)==0):
+            print(x)
