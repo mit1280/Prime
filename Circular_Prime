@@ -1,0 +1,35 @@
+def cer(x):
+    u=list(map(int, str(x)))
+    f=0
+    for i in range(len(u)-1):
+        a=u[0]
+        u.remove(u[0])
+        u.append(a)
+        sum=0
+        k=0
+        j=len(u)-1
+        while(j>=0):
+            sum=sum+u[k]*(10**j)
+            j-=1
+            k+=1
+        a=sum
+        for i in range(2,int(a/2)+1): 
+            if(a%i==0):
+                f=1    
+                break
+        if f==1:
+            break
+    if f==0:
+        print(x)
+p=int(input("enter start"))
+r=int(input("enter end"))
+if p==1:
+    p=2
+for a in range(p,r+1):
+    k=0     
+    for i in range(2,int(a/2)+1): 
+        if(a%i==0):
+            k=k+1     
+            break
+    if(k<=0):         
+        cer(a)
