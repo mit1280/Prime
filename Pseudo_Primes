@@ -1,0 +1,29 @@
+def isComposite(x):
+    f=0
+    for i in range(2,(x//2)+1):
+        if x%i==0:
+            f=1
+            break
+    if f==1:
+        return True
+    else:
+        return False
+
+p=int(input("Base"))
+r=int(input("How many Pseudoprime "))
+if p==1:
+    p=2
+x=2
+while(r>0):
+    k=0     
+    while(k==0):
+        a=(pow(p,(x-1))-1)%x
+        if a==0:
+            if(isComposite(x)):
+                print(x)
+                k=1
+            x=x+1
+            
+        else:
+            x=x+1
+    r=r-1
