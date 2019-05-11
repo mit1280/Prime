@@ -1,2 +1,2 @@
 # Prime
-This repo helps to get python code for generate various prime numbers. We will soon publish details about all this prime numbers so it is easy to understand program.
+This repot helps to get python code to generate various prime numbers. We will soon publish details about all this prime numbers so that it become easy to understand program.
