@@ -1,0 +1,23 @@
+def check_Prime(a):
+    k=0     
+    for i in range(2,int(a/2)+1): 
+        if(a%i==0):
+            k=k+1     
+            break
+    if(k<=0):         
+        return 1
+    else:
+        return 0
+p=int(input("Enter start"))
+q=int(input("Enter end"))
+for i in range(p,q):
+    if(check_Prime(i)):
+         x=0
+         x=check_Prime(i-1)
+         if x==1:
+             print(i)
+         else:
+            x=check_Prime(i+1)
+            if x==1:
+                print(i)
+   
