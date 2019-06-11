@@ -17,5 +17,3 @@ for a in range(p,r+1):
         z=(z)-int(z)
         if(z==0.0):
             print(a)
-            
-            
