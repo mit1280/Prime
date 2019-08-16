@@ -1,0 +1,9 @@
+import gmpy2
+n=33
+for x in range(int(gmpy2.sqrt(n))+1,n,1):
+    y=x*x-n
+    if(gmpy2.is_square(y)):
+        p=gmpy2.sqrt(y)
+        s=x+p
+        t=x-p
+        print(s,"and",t)
