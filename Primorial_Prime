@@ -1,4 +1,6 @@
 def check_Prime(a):
+    if(a==2):
+        return 1
     k=0     
     for i in range(2,int(a/2)+1): 
         if(a%i==0):
@@ -8,16 +10,39 @@ def check_Prime(a):
         return 1
     else:
         return 0
+def check_Primorial(a):
+    if(a<8):
+        return 1
+    p=a/2
+    
+    if(p!=int(p)):
+        return 0
+    while(p>0):
+        for i in range(3,int(a/2)+1):
+            f=0
+            for j in range(2,i):
+                if(i%j==0):
+                    f=1
+                    break
+            if(f==0):
+                
+                p=p/i
+                if(p!=int(p)):
+                    p=0
+                    break
+                if(p==1):
+                    return 1
+    return 0
+                
 p=int(input("Enter start"))
 q=int(input("Enter end"))
 for i in range(p,q):
     if(check_Prime(i)):
          x=0
-         x=check_Prime(i-1)
+         x=check_Primorial(i-1)
          if x==1:
              print(i)
          else:
-            x=check_Prime(i+1)
+            x=check_Primorial(i+1)
             if x==1:
                 print(i)
-   
