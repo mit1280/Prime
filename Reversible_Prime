@@ -4,12 +4,13 @@ if x<12:
     x=12
 for a in range(x,y+1):
     k=0     
+    sum=0
     for i in range(2,int(a/2)+1): 
         if(a%i==0):
             k=k+1     
             break
     if(k<=0):         
-        sum=0
+        
         num=a
         q=0
         p=[]
