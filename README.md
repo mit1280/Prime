@@ -1,3 +1,3 @@
 # Prime
-This repot helps to get python code to generate various prime numbers. We will soon publish details about all this prime numbers so that it become easy to understand program.
+This repot helps to generate various prime numbers using python programs. We will soon publish the details about all prime numbers, so that it becomes easy to understand program.
 In few days one file will be avaible for all primes.
