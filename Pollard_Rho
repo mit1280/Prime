@@ -1,0 +1,26 @@
+import random
+def gcd(a,b): 
+	if (a == 0): 
+		return b 
+	if (b == 0): 
+		return a 
+	if (a == b): 
+		return a 
+	if (a > b): 
+		return gcd(a-b, b) 
+	return gcd(a, b-a) 
+
+def Pollard_Rho(n):
+    x=random.randint(0,100)
+    y=x
+    c=random.randint(0,100)
+    x=(x*x+c)%n
+    p=y*y+c
+    y=(p*p+c)%n
+    x1=gcd(abs(x-y),n)
+    while(x1==1):
+        x=(x*x+c)%n
+        p=y*y+c
+        y=(p*p+c)%n
+        x1=gcd(abs(x-y),n)
+    print(x1)
