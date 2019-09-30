@@ -16,16 +16,14 @@ for i in range(1,int(len(l)-1),1):
     p=i-1
     q=i+1
     sum=0
-    while(p>=0):
+    z=c
+    while(p>=0 and z>0 and q<len(l)):
         sum=sum+l[p]+l[q]
         q+=1
         p-=1
-        x=q-p-2
-        x=sum/x
-        
-        if(x-int(x)==0):
-            if(x==m):
-                print(m)
-                break
-        if(q>len(l)-1):
-            break
+        z=z-1
+    x=q-p-2
+    x=sum/x
+    if(x-int(x)==0):
+        if(x==m):
+            print(m)
