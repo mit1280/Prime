@@ -36,6 +36,8 @@ def check_Primorial(a):
                 
 p=int(input("Enter start"))
 q=int(input("Enter end"))
+if p==1:
+    p=2
 for i in range(p,q):
     if(check_Prime(i)):
          x=0
