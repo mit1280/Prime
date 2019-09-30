@@ -1,0 +1,14 @@
+def checkGaussianPrime(realPart,imaginaryPart):
+    p,q=realPart,imaginaryPart
+    x=p**2+q**2
+    f=1
+    for i in range(2,(x//2)+1):
+        if x%i==0:
+            f=0
+    if f==1:
+        print(p,"+i",q," is gaussian prime",sep="")
+    else:
+        print("number is not gaussian prime")
+p=input("enter real part of your number")
+q=input("enter imginary part of your number")
+checkGaussianPrime(p,q)
